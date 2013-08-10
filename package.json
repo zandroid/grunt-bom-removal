@@ -1,0 +1,43 @@
+{
+  "name": "grunt-bom-removal",
+  "description": "A Byte Order Mark (BOM) removal task for grunt.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/zandroid/grunt-bom-removal",
+  "author": {
+    "name": "Andrey Zaytsev",
+    "url": "http://blog.zalab.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/zandroid/grunt-bom-removal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zandroid/grunt-bom-removal/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/zandroid/grunt-bom-removal/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.2.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
