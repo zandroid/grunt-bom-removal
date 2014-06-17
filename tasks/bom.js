@@ -16,11 +16,13 @@ module.exports = function(grunt)
             printMissed: grunt.option('verbose') === true
         });
 
-        this.filesSrc.forEach(function (filepath)
-        {
-            if (!grunt.file.exists(filepath))
-            {
+        this.filesSrc.forEach(function(filepath) {
+            if (!grunt.file.exists(filepath)) {
                 grunt.log.error('Source file "' + filepath + '" not found.');
+                return;
+            }
+            if (!grunt.file.isFile(filepath)) {
+                grunt.log.error('Source "' + filepath + '" is not a file.');
                 return;
             }
 

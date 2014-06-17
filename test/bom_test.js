@@ -9,7 +9,7 @@ function doTest(basePath, test) {
             content: buf.toString()
         };
         test.equal(7, stat.size, file + ' size should be 7 bytes.');
-        test.equal('123\n456', stat.content, file + ' content should be saved.')
+        test.equal('123\n456', stat.content, file + ' content should be saved.');
     });
     test.done();
 }

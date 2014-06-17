@@ -40,6 +40,9 @@ module.exports = function (grunt) {
             long: {
                 options: { printMissed: true },
                 src: ['tmp/sample_long/withBOM.txt', 'tmp/sample_long/withoutBOM.txt']
+            },
+            fldr: {
+                src: 'tmp/sample_fldr/*'
             }
         },
 
@@ -58,7 +61,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
-  // Setup a test helper to create some folders.
+    // Setup a test helper to create some folders.
     grunt.registerTask('tmp', ['clean', 'copy']);
 
     // Whenever the 'test' task is run, first create some files to be cleaned,
@@ -66,5 +69,5 @@ module.exports = function (grunt) {
     grunt.registerTask('test', ['tmp', 'bom', 'nodeunit']);
 
     // By default, lint and run all tests.
-    grunt.registerTask('default', ['jshint', 'test']);
+    grunt.registerTask('default', ['jshint', 'test', 'clean']);
 };
