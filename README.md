@@ -57,7 +57,7 @@ bom: {
 #### Long (specific targets with per target options)
 
 ```js
-clean: {
+bom: {
   build: {
     src: ["path/to/file/one.txt", "path/to/file/two.txt"]
   }

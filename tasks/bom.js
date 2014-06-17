@@ -10,7 +10,7 @@
 
 module.exports = function(grunt)
 {
-    grunt.registerMultiTask('bom', 'byte order mark remove files.', function()
+    grunt.registerMultiTask('bom', 'byte order mark (BOM) removal', function()
     {
         var options = this.options({
             printMissed: grunt.option('verbose') === true
@@ -18,11 +18,11 @@ module.exports = function(grunt)
 
         this.filesSrc.forEach(function(filepath) {
             if (!grunt.file.exists(filepath)) {
-                grunt.log.error('Source file "' + filepath + '" not found.');
+                grunt.log.error('The source "' + filepath + '" is not found.');
                 return;
             }
             if (!grunt.file.isFile(filepath)) {
-                grunt.log.error('Source "' + filepath + '" is not a file.');
+                grunt.log.error('The source "' + filepath + '" is not a file.');
                 return;
             }
 
@@ -30,10 +30,10 @@ module.exports = function(grunt)
             if (buf[0] === 0xEF && buf[1] === 0xBB && buf[2] === 0xBF) {
                 buf = buf.slice(3);
                 grunt.file.write(filepath, buf);
-                grunt.log.writeln('File "' + filepath + '" rewritten.');
+                grunt.log.writeln('The file "' + filepath + '" is rewritten.');
             }
             else if (options.printMissed) {
-                grunt.log.writeln('File "' + filepath + '" missed.');
+                grunt.log.writeln('The file "' + filepath + '" is missed.');
             }
         });
     });
