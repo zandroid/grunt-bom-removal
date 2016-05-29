@@ -1,7 +1,7 @@
 {
   "name": "grunt-bom-removal",
   "description": "A Byte Order Mark (BOM) removal task for grunt.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/zandroid/grunt-bom-removal",
   "author": {
     "name": "Andrey Zaytsev",
